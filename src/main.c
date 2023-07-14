@@ -1,16 +1,16 @@
 #include "../include/so_long.h"
 
-void	check_extension(char *ber)
+void	check_ber(char *ber)
 {
 	int	i;
 
 	i = ft_strlen(ber);
 	if ((ber[i - 4] != '.') || (ber[i - 3] != 'b') || (ber[i - 2] != 'e') \
 		|| (ber[i - 1] != 'r'))
-		error (4);
+		error_message (4);
 }
 
-void	error(int error)
+void	error_message(int error)
 {
 	if (error == 0)
 		ft_printf("Error\nnot walls\n");
@@ -44,7 +44,7 @@ int	main(int ac, char **av)
 	t_game	game;
 
 	if (ac != 2)
-		error(3);
+		error_message(3);
 	check_extension(av[1]);
 	init_struc(&game);
 	parsing(&game, av[1]);

@@ -8,11 +8,11 @@ void	*image(t_game *game, char *img)
 
 	image = mlx_xpm_file_to_image(game->mlxwin, img, &img_w, &img_h);
 	if (!image)
-		error(4);
+		error_message(4);
 	return (image);
 }
 
-void	start_window(t_game *game)
+void	open_window(t_game *game)
 {
 	game->mlxwin = mlx_init();
 	game->window = mlx_new_window(game->mlxwin, game->x * 64, \
@@ -24,7 +24,7 @@ void	start_window(t_game *game)
 	game->f_exit = image(game, "./xpm/f_exit.xpm");
 }
 
-void	player_move(t_game *game)
+void	player_movement(t_game *game)
 {
 	int	x;
 	int	y;
@@ -35,7 +35,7 @@ void	player_move(t_game *game)
 		game->character, x * 64, y * 64);
 }
 
-void	set_image(t_game *game)
+void	init_image(t_game *game)
 {
 	int	y;
 	int	x;
@@ -60,5 +60,5 @@ void	set_image(t_game *game)
 					game->f_exit, x * 64, y * 64);
 		}
 	}
-	player_move(game);
+	player_movement(game);
 }

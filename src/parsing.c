@@ -13,7 +13,7 @@ void	rectangular(t_game *game)
 			error(1);
 		if (ft_strlen(game->map[i]) == 0 && game->map[i + 1] \
 			&& ft_strlen(game->map[i + 1]) == 0)
-			error(2);
+			error_message (2);
 	}
     i++;
 }
@@ -32,16 +32,16 @@ void	wall(t_game *game)
 			if ((game->map[0][x] != '1' \
 				|| game->map[game->y - 1][x] != '1') \
 				&& game->map[0][x] != '\n')
-				error(0);
+				error_message (0);
 			if (game->map[y][0] != '1' || game->map[y][game->x - 1] != '1')
-				error(0);
+				error_message (0);
 		}
         x++;
 	}
     y++;
 }
 
-void	character(t_game *game)
+void	check_objet(t_game *game)
 {
 	int	y;
 	int	x;
@@ -60,14 +60,14 @@ void	character(t_game *game)
 				game->player++;
 			else if (game->map[y][x] != '0' && game->map[y][x] != '1' \
 				&& game->map[y][x] != '\n')
-				the_error(6);
+				error_message (6);
 		}
 	}
 	if (game->consum < 1 || game->exit != 1 || game->player != 1)
-		error(5);
+		error_message (5);
 }
 
-void	parsing(t_game *game, char *av)
+void	pars(t_game *game, char *av)
 {
 	int	*tab;
 

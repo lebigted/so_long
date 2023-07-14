@@ -34,7 +34,7 @@ static unsigned int	counter_lines(const char *file)
 
 	fd = open(file, O_RDONLY);
 	if (fd < 0)
-		error(8);
+		error_message (8);
 	line = get_next_line(fd);
 	nbr = 0;
 	while (line != NULL)
@@ -57,7 +57,7 @@ void	map(const char *file, t_game *game)
 	fd = open(file, O_RDONLY);
 	line = get_next_line(fd);
 	if (!line)
-		error(8);
+		error_message (8);
 	game->line.x = ft_strlen(line);
 	game->map = malloc(sizeof(char *) * (game->line.y + 1));
 	if (!game->map)
@@ -72,5 +72,5 @@ void	map(const char *file, t_game *game)
 	close(fd);
 	game->map[i] = NULL;
 	if (*game->map == NULL)
-		error(8);
+		error_message (8);
 }

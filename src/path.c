@@ -24,7 +24,7 @@ void	path(t_game *game, int y, int x)
 void	checking_path(t_game *game)
 {
 	if (game->consumcpy != game->consum || game->exitcpy == 0)
-		error(7);
+		error_message (7);
 }
 
 int	secondmap(t_game *game)
@@ -49,7 +49,7 @@ int	secondmap(t_game *game)
 	return (1);
 }
 
-int	*search_player(t_game *game)
+int	*player_info(t_game *game)
 {
 	int	*tab;
 	int	x;
