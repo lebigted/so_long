@@ -6,11 +6,28 @@
 /*   By: ltestard <ltestard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:45:42 by ltestard          #+#    #+#             */
-/*   Updated: 2023/07/14 14:52:32 by ltestard         ###   ########.fr       */
+/*   Updated: 2023/07/15 19:02:14 by ltestard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long.h"
+
+void	*ft_calloc(size_t count, size_t size)
+{
+	char	*str;
+	size_t	i;
+
+	str = malloc(count * size);
+	i = 0;
+	if (!str)
+		return (NULL);
+	while (i < (count * size))
+	{
+		str[i] = 0;
+		i++;
+	}
+	return (str);
+}
 
 void	ft_bzero(void *s, size_t n)
 {

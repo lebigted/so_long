@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   forma_my_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ltestard <ltestard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ltestard <ltestard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 09:17:15 by ltestard          #+#    #+#             */
-/*   Updated: 2023/07/14 14:53:02 by ltestard         ###   ########.fr       */
+/*   Updated: 2023/01/18 19:42:09 by ltestard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "ft_printf.h"
 
 void	forma_my_char(int c, int *res)
 {

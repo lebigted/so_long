@@ -6,11 +6,11 @@
 /*   By: ltestard <ltestard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 13:44:10 by ltestard          #+#    #+#             */
-/*   Updated: 2023/07/14 14:52:45 by ltestard         ###   ########.fr       */
+/*   Updated: 2023/07/15 15:33:52 by ltestard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *parms, ...)
 {

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_argputnbr_base.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ltestard <ltestard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ltestard <ltestard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 14:18:53 by ltestard          #+#    #+#             */
-/*   Updated: 2023/07/14 14:52:53 by ltestard         ###   ########.fr       */
+/*   Updated: 2023/01/20 17:05:30 by ltestard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "ft_printf.h"
 
 void	ft_argputnbr_base(unsigned int n, int d, int *res)
 {

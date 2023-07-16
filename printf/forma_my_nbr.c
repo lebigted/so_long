@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   forma_my_nbr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ltestard <ltestard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ltestard <ltestard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 09:17:35 by ltestard          #+#    #+#             */
-/*   Updated: 2023/07/14 14:52:58 by ltestard         ###   ########.fr       */
+/*   Updated: 2023/01/20 17:04:22 by ltestard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "ft_printf.h"
 
 void	forma_my_nbr(int nb, int *res)
 {

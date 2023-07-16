@@ -8,34 +8,41 @@ FOLDER_HDR		= includes/
 
 HEADER_SRC		= so_long.h
 
-FOLDER			= src/
-FOLDER_COM		= utils/
+FOLDER			= sources/
+FOLDER_COM		= utils_gnl/
+PRINT_F			= printf/
 
-SRCS			= 	main.c\
-					map.c\
-					parsing.c\
+SRCS			= 	initial_map.c\
+					main.c\
+					movement.c\
 					path.c\
 					so_long.c\
-					move.c
+					verify.c\
 					
+
 SRCS_COM		= 	get_next_line.c\
 					get_next_line_utils.c\
-					ft_printf.c\
-					utilitaires.c\
-					ft_calloc.c
+
+PRINT_F_SRC		= 	ft_printf.c\
+					forma_my_char.c\
+					forma_my_nbr.c\
+					forma_my_putstr.c\
+					ft_argputnbr_base.c\
 
 SRC				= $(addprefix ${FOLDER}, ${SRCS})
 SRC_COM			= $(addprefix ${FOLDER_COM}, ${SRCS_COM})
+PRINT_ADD		= $(addprefix ${PRINT_F}, ${PRINT_F_SRC})
 
 OBJS			= ${SRC:.c=.o}
 OBJS_COM		= ${SRC_COM:.c=.o}
+PRINT_F_OBJ		= ${PRINT_ADD:.c=.o}
 
 OS				= $(shell uname -s)
 
 ifeq ($(OS),Darwin)
 LIB				= -lmlx -framework OpenGL -framework AppKit
 endif
-OBJ				= ${OBJS} ${OBJS_COM}
+OBJ				= ${OBJS} ${OBJS_COM} ${PRINT_F_OBJ}
 HEADER			= $(addprefix ${FOLDER_HDR}, ${HEADER_SRC})
 
 ifdef DEBUG
@@ -54,7 +61,7 @@ all:		${NAME}
 
 clean:
 			@printf "$(RED)Destroying ${NAME} objs (*.o)\n$(RES)"
-			@${RM} ${OBJS} ${OBJS_BNS} ${OBJS_COM}
+			@${RM} ${OBJS} ${OBJS_BNS} ${OBJS_COM} ${PRINT_F_OBJ}
 			@${COMPIL_MLX} ${CLEAN}
 
 fclean:		clean

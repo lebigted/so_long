@@ -6,11 +6,11 @@
 /*   By: ltestard <ltestard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 09:12:09 by ltestard          #+#    #+#             */
-/*   Updated: 2023/07/14 14:52:22 by ltestard         ###   ########.fr       */
+/*   Updated: 2023/07/15 15:35:44 by ltestard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/so_long.h"
+#include "ft_printf.h"
 
 void	forma_my_putstr(char *str, int *res)
 {
@@ -29,13 +29,13 @@ void	forma_my_putstr(char *str, int *res)
 	}
 }
 
-void	ft_strlen(char *str)
-{
-	int	i;
+// void	ft_strlen(char *str)
+// {
+// 	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-}
+// 	i = 0;
+// 	while (str[i] != '\0')
+// 	{
+// 		i++;
+// 	}
+// }
